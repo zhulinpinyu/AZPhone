@@ -14,7 +14,7 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillLayoutSubviews() {
