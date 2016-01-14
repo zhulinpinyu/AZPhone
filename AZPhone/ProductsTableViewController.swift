@@ -17,9 +17,16 @@ class ProductsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "Hello Swift World."
+        cell.textLabel?.text = "Hi Table"
         cell.imageView?.image = UIImage(named: "image-cell1")
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showProduct" {
+            let productVC = segue.destinationViewController as? ProductViewController
+            productVC?.productName = "Hi Table"
+        }
     }
 
     
